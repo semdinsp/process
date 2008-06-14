@@ -1,0 +1,29 @@
+
+/*
+ * eadmin.css
+ */
+
+.eadmin_status
+{
+    width: 100%;
+    border: 0px;
+}
+.eadmin_errors
+{
+    font-size: 70%;
+    margin-left: 28px;
+}
+.eadmin_error
+{
+    border: 1px solid #eeeeee;
+    padding: 3px;
+}
+.eadmin_error_replay
+{
+    float: right;
+}
+.eadmin_ps_buttons
+{
+    font-size: 80%;
+    text-align: right;
+}

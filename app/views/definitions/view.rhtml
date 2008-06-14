@@ -1,0 +1,34 @@
+
+<%= javascript_include_tag "densha-corner" %>
+<%= javascript_include_tag "densha-fluo" %>
+
+<div class="definitions_url">
+<%= link_to @defurl, @defurl %>
+</div>
+
+<div class="definitions_buttons">
+<!--
+<%=
+    link_to(
+        "launch this process", 
+        :controller => "launch", :action => "launch", 
+        :defurl => @defurl) if @launch
+-%>
+-->
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="width: 50%; float:left;">
+<%= @wrapped_process_definition %>
+</div>
+
+<div id="fluo" style="width: 49%; float:right;">
+</div>
+
+<script>
+    renderExpression('fluo', null, <%= @json_process_definition %>);
+</script>
+
+<div style="clear: both;"></div>
+

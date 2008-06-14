@@ -1,0 +1,20 @@
+<!--
+    a tiny, sequential process definition, expressed in XML
+    just a "hello world !"
+-->
+<process-definition name="simple_xml" revision="1">
+    <sequence>
+        <participant ref="setup" />
+        <concurrence>
+            <participant ref="debit" />
+            <participant ref="credit" />
+        </concurrence>
+        <participant ref="summarize" />
+        <participant ref="detail" />
+        <if>
+            <equals field-value="final_response" other-value="all ok" />
+                <participant ref="inform_success" />
+                <participant ref="reverse_charges" />
+        </if>
+    </sequence>
+</process-definition>

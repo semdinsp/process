@@ -1,0 +1,10 @@
+<h3>users</h3>
+<div class="wadmin_category_description">
+listing the users of this "densha" web application
+</div>
+<%= 
+    render_record_table(
+        User,
+        records,
+        [ [ :name, "60%" ], [ :admin, "20%" ] ])
+-%>

@@ -1,0 +1,12 @@
+<h3>stores</h3>
+
+<div class="wadmin_category_description">
+the engine dispatches workitems to participants, the regular expressions are used to match those participant names to store names
+</div>
+
+<%= 
+    render_record_table(
+        WiStore,
+        records,
+        [ [ :name, "40%" ], [ :regex, "44%" ] ])
+-%>

@@ -1,0 +1,11 @@
+<!--
+    a tiny, sequential process definition, expressed in XML
+    just a "hello world !"
+-->
+<process-definition name="simple_sequence" revision="1">
+    <sequence>
+        <set field="message" value="hello world !" />
+        <participant ref="bravo" />
+        <participant ref="alpha" />
+    </sequence>
+</process-definition>

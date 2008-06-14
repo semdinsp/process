@@ -1,0 +1,12 @@
+<!--
+  load pin process for CURE
+
+-->
+<process-definition name="worktest" revision="1">
+    <sequence>
+        <participant ref="setup" />
+        <participant ref="debug" />
+        <participant ref="summarize" />
+         <participant ref="mail" />
+    </sequence>
+</process-definition>

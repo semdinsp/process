@@ -1,0 +1,4 @@
+
+page.replace_html "flash", "process instance #{@wfid} got cancelled"
+page.remove "eadmin_row_#{@wfid}"
+

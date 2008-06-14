@@ -1,0 +1,20 @@
+<!--
+  load pin process for CURE
+
+-->
+<process-definition name="load" revision="1">
+    <sequence>
+        <participant ref="setup" />
+        <participant ref="load_store" />
+        <participant ref="load" />
+        <participant ref="debug" />
+        <participant ref="summarize" />
+        <if>
+            <equals field-value="final_response" other-value="all ok" />
+                <participant ref="inform_success_load" />
+                <participant ref="process_failure" />
+        </if>
+         <participant ref="mail" />
+        <participant ref="load_store" />
+    </sequence>
+</process-definition>

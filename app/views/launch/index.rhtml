@@ -1,0 +1,38 @@
+
+<%
+    @launch_permissions.each_with_index do |permission, i|
+
+        lpid = "launchp-#{i}"
+-%>
+<div 
+    id="<%= lpid %>"
+    class="launchp"
+    onmouseover="<%= omover lpid, 'row_over' %>"
+    onmouseout="<%= omout lpid, 'row_over' %>"
+>
+    <div class="launchp_info">
+        <span class="launchp_url"><%= h(permission.url) %></span>
+        <span class="launchp_groupname"><%= h(permission.groupname) %></span>
+        <span class="launchp_description"><%= get_description(permission.url) %></span>
+    </div>
+    <div 
+        class="launchp_buttons"
+    >
+<!--  scott <%= 
+        link_to(
+            "launch", :action => "launch", 
+            :defurl => permission.url)
+    -%> 
+-->
+| <%= 
+        link_to(
+            "view", :controller => "definitions", :action => "view", 
+            :defurl => permission.url,
+            :launch => true)
+    -%></div>
+    <div style="clear: both;"></div>
+</div>
+<%
+    end
+-%>
+

@@ -1,0 +1,44 @@
+
+.corner_nw
+{
+    float: left;
+    width: 6px; height: 6px;
+    background-image: url(/images/corner/corner_nw.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.corner_ne
+{
+    float: right;
+    width: 6px; height: 6px;
+    background-image: url(/images/corner/corner_ne.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.corner_sw
+{
+    float: left;
+    width: 6px; height: 6px;
+    background-image: url(/images/corner/corner_sw.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.corner_se
+{
+    float: right;
+    width: 6px; height: 6px;
+    background-image: url(/images/corner/corner_se.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.corner_ruler
+{
+    background-color: black;
+}
+
+.corner_content
+{
+    text-align: center;
+    margin: 0em auto 0 auto;
+}
+

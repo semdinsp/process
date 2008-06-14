@@ -1,0 +1,49 @@
+
+<%= javascript_include_tag "densha-wadmin" %>
+
+<div>
+
+    <div id="wadmin_User" style="float: left; width:49%;">
+    <%= render(
+        :partial => "index_users", 
+        :locals => { :records => @users })
+    -%>
+    </div>
+
+    <div id="wadmin_Group" style="float: left; width:49%;">
+    <%= render :partial => "index_groups", :locals => { :records => @groups } %>
+    </div>
+
+    <div style="clear: both;"></div>
+</div>
+
+<div>
+
+    <div id="wadmin_StorePermission" style="float: left; width:49%;">
+    <%= render(
+        :partial => "index_storepermissions", 
+        :locals => { :records => @storepermissions })
+    -%>
+    </div>
+
+    <div id="wadmin_WiStore" style="float: left; width:49%;">
+    <%= render(
+        :partial => "index_wistores", 
+        :locals => { :records => @stores })
+    -%>
+    </div>
+
+    <div style="clear: both;"></div>
+</div>
+
+<div>
+
+    <div id="wadmin_LaunchPermission" style="float: left; width:90%;">
+    <%= render(
+        :partial => "index_launchpermissions", 
+        :locals => { :records => @launchpermissions })
+    -%>
+    </div>
+
+    <div style="clear: both;"></div>
+</div>

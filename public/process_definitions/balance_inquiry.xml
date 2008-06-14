@@ -1,0 +1,11 @@
+<!--
+  Balance transfer process for CURE
+
+-->
+<process-definition name="balance_inquiry" revision="1">
+    <sequence>
+        <participant ref="setup" />
+        <participant ref="debug" />
+        <participant ref="mail" />
+    </sequence>
+</process-definition>

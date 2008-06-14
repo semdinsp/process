@@ -1,0 +1,33 @@
+<script>
+    function hideErrors (wfid) {
+        elt = $('errors_'+wfid);
+        if (elt) elt.remove();
+    }
+</script>
+
+<table class="eadmin_status">
+    <tr>
+        <th width="25%">workflow instance id</th>
+        <th width="20%">name</th>
+        <th width="10%">errors</th>
+        <th width="20%">state</th>
+        <th width="25%"><!-- buttons --></th>
+    </tr>
+    <%
+        @status.values.each do |@row_status|
+
+            @row_wfid = @row_status.wfid
+            @row_id = "eadmin_row_#{@row_wfid}"
+    -%>
+    <tr
+        id="<%= @row_id %>"
+        onmouseover="<%= omover(@row_id, 'row_over') %>"
+        onmouseout="<%= omout(@row_id, 'row_over') %>"
+    >
+        <%= render :partial => "process_status" %>
+    </tr>
+    <%
+        end
+    -%>
+</table> 
+
